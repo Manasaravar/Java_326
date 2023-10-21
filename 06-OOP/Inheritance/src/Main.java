@@ -56,7 +56,7 @@ public class Main
         {
             System.out.println(((Object)group[i]).getClass().getSimpleName() + ":\t" + group[i] + ";");
         }
-        //  save(group, "group.txt");
+        //save(group, "group.txt");
        // System.out.println(Arrays.toString(load("group.txt")));
        load("group.txt");
     }
@@ -76,9 +76,7 @@ public class Main
             writer.write('\n');
         }
         writer.close(); //Потоки обязательно нужно закрывать
-
-        String command = "C:\\Users\\User\\IdeaProjects\\Java_326\\06-OOP\\Inheritance\\notepad++ " + filename;
-
+        String command = "notepad " + filename;
         Process process = Runtime.getRuntime().exec(command);
     }
     // Метод load
