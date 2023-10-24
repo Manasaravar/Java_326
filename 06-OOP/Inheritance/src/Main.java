@@ -1,4 +1,4 @@
-import java.io.File;
+//import java.io.File;
 import java.io.IOException;
 import java.io.FileWriter;
 import java.util.ArrayList;
@@ -37,7 +37,7 @@ public class Main
 
         //upcast - преобразование дочернего объекта в базовый.
         //Generalisation - обобщение объектов.
-
+/*
 
         Specialist leo = new Specialist("Rosenberg", "Ken", 35, "Lower", "Vice", 35, 22, "No money - no honey", 3);
         Human[] group = new Human[]
@@ -55,13 +55,19 @@ public class Main
         for(int i = 0; i < group.length; i++)
         {
             System.out.println(((Object)group[i]).getClass().getSimpleName() + ":\t" + group[i] + ";");
-        }
+        }*/
         //save(group, "group.txt");
        // System.out.println(Arrays.toString(load("group.txt")));
-       load("group.txt");
+        File file = new File("group.txt");
+        Human[] group = file.load();
+        for (int i = 0; i < group.length; i++) {
+            System.out.println(group[i]);
+
+        }
+        //load("group.txt");
     }
     //  Метод save
-    public static void save(Human[] group, String filename)throws IOException
+    /*public static void save(Human[] group, String filename)throws IOException
     {
         File file = new File(filename);
         System.out.println(file.getAbsoluteFile());
@@ -107,6 +113,6 @@ public class Main
         }
         scanner.close();
         return al_group.toArray(group);
-    }
+    }*/
 
 }
